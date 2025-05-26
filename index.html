@@ -2,104 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Advika's Portfolio</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background: #f8f6f2;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
       scroll-behavior: smooth;
     }
     header {
-      padding: 2rem;
-      background: #ffffff;
-      border-bottom: 1px solid #e5e5e5;
+      background: #fffbf2;
+      padding: 2rem 1rem;
       text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: #5b4636;
+    }
+    header p {
+      margin: 0;
+      font-style: italic;
+      color: #a68a64;
+      font-size: 1.2rem;
+    }
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
-      margin: 0 1rem;
       text-decoration: none;
-      color: #5a5a5a;
-      font-weight: bold;
+      color: #7a6450;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background: #e6d9c5;
+      color: #5b4636;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem 3rem;
     }
     section {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 1rem 2rem;
+      margin-bottom: 3rem;
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 1.8rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgb(0 0 0 / 0.1);
     }
-    h1, h2 {
-      color: #333;
+    section h2 {
+      margin-top: 0;
+      color: #5b4636;
+      font-weight: 700;
+      border-bottom: 2px solid #e6d9c5;
+      padding-bottom: 0.3rem;
     }
-    .tagline {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      color: #888;
+    ul.skills {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
     }
-    .skills ul {
-      padding-left: 1.2rem;
+    ul.skills li {
+      background: #e6d9c5;
+      color: #5b4636;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    p {
+      white-space: pre-line;
+    }
+    .projects a {
+      display: inline-block;
+      margin-top: 0.6rem;
+      color: #7a6450;
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 600;
     }
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 1rem 0;
       font-size: 0.9rem;
-      color: #999;
+      color: #a68a64;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Advika</h1>
-    <div class="tagline">Designing Impact, Leading with Purpose</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="https://www.linkedin.com/in/advika-sriperambuduru-144912286/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </nav>
+    <p>Designing Impact, Leading with Purpose</p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm currently pursuing my Bachelor of Business Administration (BBA) with a strong interest in product development, entrepreneurship, and management. I’m deeply passionate about merging creativity with strategy—whether that’s through building scalable projects or crafting compelling design experiences.</p>
-    <p>As a classical Kuchipudi dancer recognized by the Guinness Book of Records, Wonder Book of Records, and Telugu Book of Records, I bring discipline, dedication, and a unique cultural perspective into everything I do.</p>
-    <p>I co-founded LEAP (Leadership and Entrepreneurship Awareness Program), an initiative that bridges the gap between aspiring young minds and real-world business leaders. Through LEAP, I’ve interviewed numerous startup founders, entrepreneurs, and industry pioneers to extract actionable insights for students.</p>
-    <p>I’ve also led branding and content for Tathastu Life, a psychological counseling center—designing logos, producing videos, and driving communication strategies, while also working in operations and management.</p>
-  </section>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+  </nav>
 
-  <section id="skills">
-    <h2>What I Do</h2>
-    <p><strong>Areas of Expertise:</strong> Product Management, Operations, Brand Designing, Administration</p>
-    <p><strong>Skills:</strong></p>
-    <div class="skills">
-      <ul>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm currently pursuing my Bachelor of Business Administration (BBA) with a strong interest in product development, entrepreneurship, and management. I’m deeply passionate about merging creativity with strategy—whether that’s through building scalable projects or crafting compelling design experiences. As a classical Kuchipudi dancer recognized by the Guinness Book of Records, Wonder Book of Records, and Telugu Book of Records, I bring discipline, dedication, and a unique cultural perspective into everything I do.</p>
+      <p>I co-founded LEAP (Leadership and Entrepreneurship Awareness Program), an initiative that bridges the gap between aspiring young minds and real-world business leaders. Through LEAP, I’ve interviewed numerous startup founders, entrepreneurs, and industry pioneers to extract actionable insights. These learnings are then transformed into research-backed content and shared with middle school students, nurturing the next generation of entrepreneurs with practical, experience-based knowledge beyond textbooks.</p>
+      <p>Additionally, I’ve worked closely with <strong>Tathastu Life</strong>, a psychological counseling center, where I led the branding and content creation—designing the logo, producing videos, and driving communication strategies. I also played an active role in operations and management, contributing directly to the center’s growth and outreach.</p>
+      <p>I believe in creating impact through action—whether it's initiating a program, designing meaningful content, or managing real-world operations. I'm always on the lookout for opportunities to collaborate, learn, and build things that matter.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>Product Management</li>
+        <li>Operations</li>
+        <li>Brand Designing</li>
+        <li>Administration</li>
         <li>Communication</li>
-        <li>Research & Strategy</li>
+        <li>Research Skills</li>
         <li>Project Management</li>
         <li>Leadership</li>
         <li>Designing</li>
         <li>Team Management</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <h3 id="leap">LEAP: Leadership & Entrepreneurship Awareness Program</h3>
-    <p>LEAP is a student-led initiative co-founded by me to build entrepreneurial spirit in middle and high school students. We've conducted interviews with real-world startup founders and translated their knowledge into curriculum-style content and workshops.</p>
-    
-    <h3 id="counseling">Branding Tathastu Life – Psychological Counseling Center</h3>
-    <p>I worked closely with Tathastu Life, a psychological counseling center, where I handled complete brand building—logo design, social content creation, video production, and marketing. I also managed day-to-day operations and contributed to business growth.</p>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <p><strong>LEAP (Leadership and Entrepreneurship Awareness Program):</strong> Co-founded an initiative that connects young aspiring entrepreneurs with real-world business leaders through interviews and research-backed content for middle school students.</p>
+      <p><strong>Tathastu Life:</strong> Led branding, content creation, and operations at a psychological counseling center to enhance growth and outreach.</p>
+    </section>
+  </main>
 
   <footer>
-    © 2025 Advika. Designed with ☕ and ambition.
+    &copy; 2025 Advika
   </footer>
 </body>
 </html>
